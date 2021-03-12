@@ -83,7 +83,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  coveralls (~> 0.8)
+  coveralls (~> 0.8.23)
   pry (~> 0.12)
   rake (~> 12.3, >= 12.3)
   rspec (~> 3.9)
