@@ -3,35 +3,32 @@
 require 'sinatra'
 require 'yaml/store'
 
-CHOICES = {
-  'HAM' => 'Hamburger',
-  'PIZ' => 'Pizza',
-  'CUR' => 'Curry',
-  'NOO' => 'Noodles'
-}.freeze
+require_relative 'lib/page'
 
-get '/' do
-  @title = 'Welcome to the Suffragist!'
-  erb :index
-end
+class Suffragist < Sinatra::Base
+  set :store, YAML::Store.new('votes.yaml')
 
-post '/cast' do
-  @title = 'Thankyou for your vote!'
-  @vote = params['vote']
-
-  @store = YAML::Store.new 'votes.yaml'
-  @store.transaction do
-    @store['votes'] ||= {}
-    @store['votes'][@vote] ||= 0
-    @store['votes'][@vote] += 1
+  get '/' do
+    @page = Page.new('Welcome to the Suffragist!')
+    erb :index
   end
 
-  erb :cast
-end
+  post '/cast' do
+    @page = Page.new('Thankyou for your vote!', settings.store)
+    @page.save(params['vote'])
 
-get '/results' do
-  @store = YAML::Store.new 'votes.yaml'
-  @votes = @store.transaction { @store['votes'] }
+    erb :cast
+  end
 
-  erb :results
+  get '/results' do
+    @page = Page.new('Results so far:', settings.store)
+
+    erb :results
+  end
+
+  not_found do
+    @page = Page.new('Oh no!')
+    status 404
+    erb :oh_no
+  end
 end
