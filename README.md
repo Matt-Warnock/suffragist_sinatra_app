@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/Matt-Warnock/suffragist_sinatra_app.svg?branch=main)](https://travis-ci.org/Matt-Warnock/suffragist_sinatra_app)
-[![Coverage Status](https://coveralls.io/repos/github/Matt-Warnock/suffragist_sinatra_app/badge.svg?branch=main)](https://coveralls.io/github/Matt-Warnock/suffragist_sinatra_app?branch=main)
-[![Maintainability](https://api.codeclimate.com/v1/badges/928faf993ccf571770dc/maintainability)](https://codeclimate.com/github/Matt-Warnock/suffragist_sinatra_app//maintainability)
+[![Build Status](https://travis-ci.org/Matt-Warnock/suffragist_sinatra_app.svg?branch=master)](https://travis-ci.org/Matt-Warnock/suffragist_sinatra_app)
+[![Coverage Status](https://coveralls.io/repos/github/Matt-Warnock/suffragist_sinatra_app/badge.svg?branch=master)](https://coveralls.io/github/Matt-Warnock/suffragist_sinatra_app?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6bd6775ffbfc9fe649a7/maintainability)](https://codeclimate.com/github/Matt-Warnock/suffragist_sinatra_app/maintainability)
 [![Dependency status](https://badges.depfu.com/badges/a5f9aa0eb83998a1a81f7b1298a0b4f8/overview.svg)](https://depfu.com/github/Matt-Warnock/suffragist_sinatra_app?project=Bundler)
 
 
