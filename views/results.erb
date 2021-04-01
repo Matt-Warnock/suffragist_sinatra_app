@@ -1,9 +1,9 @@
 <table class='table table-hover table-striped'>
-  <% CHOICES.each do |id, text| %>
+  <% @page.class::CHOICES.each do |id, text| %>
     <tr>
-      <th><%= text %></th>
-      <td><%= @votes[id] || 0 %>
-      <td><%= '#' * (@votes[id] || 0) %></td>
+      <th class="food"><%= text %></th>
+      <td><%= @page.votes[id] || 0 %></td>
+      <td><%= '#' * (@page.votes[id] || 0) %></td>
     </tr>
   <% end %>
 </table>
